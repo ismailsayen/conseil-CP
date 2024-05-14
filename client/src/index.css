@@ -5,7 +5,9 @@
   }
 
 
-
+#menu-appbar{
+  width: 600px;
+}
   @tailwind base;
   @tailwind components;
   @tailwind utilities;

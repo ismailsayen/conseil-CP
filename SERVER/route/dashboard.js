@@ -51,17 +51,17 @@ route.put('/edituser/:id', Auhtorization,async (req, res) => {
   }
 })
 // supprimer un utilisateur
-route.delete('/delete/:id', Auhtorization, async (req, res) => {
+route.delete('/delete/:email', Auhtorization, async (req, res) => {
   try {
     // Vérifier si l'utilisateur est autorisé à effectuer cette action
     if (req.role !== 'admin') {
       return res.status(403).send('Non autorisé');
     } 
 
-    const { id } = req.params;
-    console.log(id)
+    const { email } = req.params;
+    console.log(email)
     // Supprimer l'utilisateur de la base de données en utilisant son ID
-    const deleteUser = await pool.query('DELETE FROM utilisateur WHERE id = $1', [id]);
+    const deleteUser = await pool.query('DELETE FROM utilisateur WHERE email = $1', [email]);
 
     // Vérifier si l'utilisateur a été supprimé avec succès
     if (deleteUser.rowCount === 1) {

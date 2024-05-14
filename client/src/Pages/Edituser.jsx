@@ -73,16 +73,22 @@ const Edituser = () => {
                             <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Adresse Email</label>
                             <input value={email} onChange={(e) => setEmail(e.target.value)} required type="text" name="email" id="email" className="bg-[#FFFFff] border border-gray-300 text-gray-900 text-sm font-medium rounded-md focus:shadow-md focus:border-primary-600 hover:border-primary-500 hover:shadow-md block w-full p-2.5" />
                         </div>
-                        <div>
+                        {sexe!=="homme" ? (<div>
                             <label htmlFor="sexe" className="block mb-2 text-sm font-medium text-gray-900">Genre</label>
-                            <select value={sexe} onChange={(e) => setSexe(e.target.value)} required id="grade" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
-                                <option value="Homme">Homme</option>
-                                <option value="Femme">Femme</option>
+                            <select onChange={(e) => setSexe(e.target.value)} required id="grade" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
+                                <option value={sexe}>{sexe}</option>
+                                <option value="homme">Homme</option>
                             </select>
-                        </div>
+                        </div>):<div>
+                            <label htmlFor="sexe" className="block mb-2 text-sm font-medium text-gray-900">Genre</label>
+                            <select onChange={(e) => setSexe(e.target.value)} required id="grade" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
+                                <option value={sexe}>{sexe}</option>
+                                <option value="femme">Femme</option>
+                            </select>
+                        </div>}
                         <div>
                             <label htmlFor="grade" className="block mb-2 text-sm font-medium text-gray-900">Grade</label>
-                            <select value={grade} onChange={(e) => setGrade(e.target.value)} required id="grade" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
+                            <select value={grade}  onChange={(e) => setGrade(e.target.value)} required id="grade" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
                                 <option value="admin">Admin</option>
                                 <option value="sous-Admin">Sous-Admin</option>
                             </select>
