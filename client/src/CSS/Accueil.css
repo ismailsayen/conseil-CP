@@ -1,0 +1,52 @@
+.userCard:hover{
+    background-color: #FA5A7D;
+    .icon{
+        background: #FFFFFF;
+        i{
+            color: #FA5A7D;
+        }
+    }
+    div span ,p,span {
+        color: #FFFFFF;
+    }
+}
+.stockCard:hover{
+    background-color: #FF947A;
+    .icon{
+        background: #FFFFFF;
+        i{
+            color: #FF947A;
+        }
+    }
+    div span , p , span {
+        color: #FFFFFF;
+    }
+}
+.fournisseurCard:hover{
+    background-color: #3CD856;
+    .icon{
+        background: #FFFFFF;
+        i{
+            color: #3CD856;
+        }
+    }
+    div span , p , span {
+        color: #FFFFFF;
+    }
+
+
+}
+.statsCard:hover{
+    background-color: #BF83FF;
+    .icon{
+        background: #F3E8FF;
+        i{
+            color: #BF83FF;
+        }
+    }
+    div span ,p,span {
+        color: #F3E8FF;
+    }
+}
+
+

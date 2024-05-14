@@ -1,0 +1,186 @@
+{
+  "Fournisseurs": [
+    {
+      "id": 1640191,
+      "nom_fournisseur": "fourinsseur_1",
+      "adresse_fournisseur": "RUE IBNOU EL OUENNANE AIN SEBAA",
+      "ville_fournisseur": "CASABLANCA",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 3339998,
+      "nom_fournisseur": "ORTHO REALISATIONS",
+      "adresse_fournisseur": "RESIDENCE CHAOUI LT MABROUKA IM 19 N°1",
+      "ville_fournisseur": "RABAT",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 3346423,
+      "nom_fournisseur": "STE NATIONALE DES TRANSPORTS ET DE LA LOGISTIQUE SNTL",
+      "adresse_fournisseur": "4 RUE AL FADILA QI CYM",
+      "ville_fournisseur": "RABAT",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 6927100,
+      "nom_fournisseur": "STE DELTA ACT",
+      "adresse_fournisseur": "45 BD GHANDI CITE DAKHLA",
+      "ville_fournisseur": "AGADIR",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 6928528,
+      "nom_fournisseur": "STE SELECT BUREAU SARL",
+      "adresse_fournisseur": "N° 20 AV ABOU JIHAD CITE AL MASSIRA",
+      "ville_fournisseur": "AGADIR",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 6980169,
+      "nom_fournisseur": "STE IMPRIMERIE AFOLKI",
+      "adresse_fournisseur": "N°3 LOT ACHAOUI AFREAG",
+      "ville_fournisseur": "TIZNIT",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 6980436,
+      "nom_fournisseur": "STE MEDA COPIE SARL",
+      "adresse_fournisseur": "88 BLOC C AMICALE DES FONCTIONNAIRES",
+      "ville_fournisseur": "TIZNIT",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 6980447,
+      "nom_fournisseur": "STE LIBERTY PNEUS",
+      "adresse_fournisseur": "N°35 LOT ASSAKA 3 ROUTE D'AGADIR",
+      "ville_fournisseur": "TIZNIT",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 6980476,
+      "nom_fournisseur": "STE ASSAKA NEGOCE",
+      "adresse_fournisseur": "N°7 LOT ZAITOUNE AFEAG",
+      "ville_fournisseur": "TIZNIT",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 14393695,
+      "nom_fournisseur": "STE GOUS MEDIA ECO SARL",
+      "adresse_fournisseur": "RUE DE LA MOSQUEE LES CHALETS",
+      "ville_fournisseur": "BIOUGRA",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 14431552,
+      "nom_fournisseur": "STE UKLANE PUB",
+      "adresse_fournisseur": "N°20 RUE AFOULKI EL YOUSSOUFIA",
+      "ville_fournisseur": "TIZNIT",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 14433760,
+      "nom_fournisseur": "STE SOUSS NEGOCE TECHNIQUE SARL",
+      "adresse_fournisseur": "AV BIR ANZARAN N°31",
+      "ville_fournisseur": "BIOUGRA",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 14462014,
+      "nom_fournisseur": "SOCIETE GLOBAL STAR DU SOUSS SARL",
+      "adresse_fournisseur": "BD ABDELKRIM EL KHATTABI N°86 CITE EL MASSIRA",
+      "ville_fournisseur": "AGADIR",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 15171616,
+      "nom_fournisseur": "STE OUBIHI AUTO SARL",
+      "adresse_fournisseur": "N°102 LOT AARAFA",
+      "ville_fournisseur": "TIZNIT",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 18814777,
+      "nom_fournisseur": "STE LIBRAIRIE MANAHIL AL IRFANE SARL",
+      "adresse_fournisseur": "N°9 BLOC A HAY SIDI SAID DRARGA",
+      "ville_fournisseur": "AGADIR",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 20773022,
+      "nom_fournisseur": "STE RED ROCKET",
+      "adresse_fournisseur": "RIAD SALAM RESIDENCE AFERNI 2 302 B",
+      "ville_fournisseur": "AGADIR",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 26083893,
+      "nom_fournisseur": "ALLIANCE IMPREMERIE SARL",
+      "adresse_fournisseur": "BLOC A6 N° 59 CITE AL QODS",
+      "ville_fournisseur": "AGADIR",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 33673242,
+      "nom_fournisseur": "STE AZERDOU NEGOCE SARL",
+      "adresse_fournisseur": "BLOC 43 RUE 39 N°2 AL WAFAQ BENSERGAOU",
+      "ville_fournisseur": "AGADIR",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 40198628,
+      "nom_fournisseur": "STE TIZNIT CERAM",
+      "adresse_fournisseur": "N°84 BD BIR ANZARANE ROUTE GUELMIM",
+      "ville_fournisseur": "TIZNIT",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 40272415,
+      "nom_fournisseur": "STE RACHAM IMMOBILIER",
+      "adresse_fournisseur": "N°1 RUE BOUYERD IDGOUFA",
+      "ville_fournisseur": "TIZNIT",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 40444126,
+      "nom_fournisseur": "MEGA PRINT AGENCE DE PUBLICITE",
+      "adresse_fournisseur": "N°26 BLOC C AMICALES DES FONCTIONNAIRES",
+      "ville_fournisseur": "TIZNIT",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 40474213,
+      "nom_fournisseur": "STE SECUTEL SURVEILLANCE",
+      "adresse_fournisseur": "N°26 BLOC C AMICALES DES BNAYA",
+      "ville_fournisseur": "TIZNIT",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 45751531,
+      "nom_fournisseur": "STE HCH NEGOCE SARL",
+      "adresse_fournisseur": "N°74 ANGLE AV FARHAT HACHADE ET GHANDI CITE AL QODS",
+      "ville_fournisseur": "AGADIR",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 75764468,
+      "nom_fournisseur": "AZAIM HASSAN",
+      "adresse_fournisseur": "7 RUE TENSIFT CITE QODS",
+      "ville_fournisseur": "AGADIR",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 76144402,
+      "nom_fournisseur": "STE AL INBIAAT NEGOCE",
+      "adresse_fournisseur": "50 HAY AL WIFAQ BENSERGAOU",
+      "ville_fournisseur": "AGADIR",
+      "type_d_achat": "-"
+    },
+    {
+      "id": 76144761,
+      "nom_fournisseur": "MAZATEL",
+      "adresse_fournisseur": "APP 3 IMM 10 COMPLEXE ARGANA JET SKANA",
+      "ville_fournisseur": "AGADIR",
+      "type_d_achat": "-"
+    }
+  ]
+}
