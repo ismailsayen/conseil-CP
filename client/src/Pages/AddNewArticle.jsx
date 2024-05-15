@@ -4,7 +4,7 @@ import { GET_SOUS_FAMILLE } from "../GQL/queries";
 import { Link } from 'react-router-dom'
 import Loader from '../Components/Loader/Loader';
 
-const Product = () => {
+const AddNewArticle = () => {
     const { loading, error, data } = useQuery(GET_SOUS_FAMILLE);
     if (loading) return <Loader />;
     if (error) return `Error! ${error.message}`;
@@ -68,4 +68,4 @@ const Product = () => {
     )
 }
 
-export default Product
+export default AddNewArticle

@@ -168,7 +168,7 @@ const [name, setName] = useState([]);
                         </li>
                         <li>
                             <div className='p-3 cursor-pointer  rounded-md flex text-gray-700 mb-3 justify-between items-center hover:bg-[#5D5FEF] hover:shadow hover:text-white' onClick={() => setDropdown(prev => !prev)}>
-                                <Link to="/Stock" className="flex items-center rounded-md group">
+                                <Link className="flex items-center rounded-md group">
                                 <i class="fa-solid fa-store"></i>
                                     <span class="flex-1 font-semibold ms-3 whitespace-nowrap">Stock</span>
                                 </Link>

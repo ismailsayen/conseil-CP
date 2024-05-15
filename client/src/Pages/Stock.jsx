@@ -48,7 +48,7 @@ export default function Stock() {
     return (
         <>
             <div className='text-3xl mb-3'>Liste des Produits</div>
-            <Link to="/Product" className='flex w-[200px] mb-3 shadow-md items-center justify-center gap-2 text-white border-2 border-blue-700  bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center hover:bg-blue-600'>
+            <Link to="/Stock/Add-New-Product" className='flex w-[200px] mb-3 shadow-md items-center justify-center gap-2 text-white border-2 border-blue-700  bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center hover:bg-blue-600'>
                 <i class="fa-solid fa-user-plus"></i>
                 <span>Ajouter un Article</span>
             </Link>

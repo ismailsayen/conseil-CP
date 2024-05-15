@@ -84,7 +84,7 @@ export default function Utilisateurs({ role }) {
                         </button>
                     </Link>
                 )}
-                <div className='bg-white rounded-lg shadow-md w-full h-[550px]'>
+                <div className='bg-white rounded-lg shadow-md w-full h-[350px]'>
                     <DataGrid rows={users} columns={columns} pageSize={8} checkboxSelection disableSelectionOnClick />
                 </div>
             </div>
