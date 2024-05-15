@@ -7,7 +7,7 @@ const PieChartComponent = ({ data,h }) => (
             {
                 data: data,
                 highlightScope: { faded: 'global', highlighted: 'item' },
-                faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+                faded: { innerRadius: 30, additionalRadius: -5, color: 'black' },
             },
         ]}
         height={h}

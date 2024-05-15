@@ -4,7 +4,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: gray;
+    background-color: rgba(0, 0, 0, 0.678);
     opacity: 0.6;
     z-index: 999;
 }
@@ -29,7 +29,7 @@
 .jimu-primary-loading:before,
 .jimu-primary-loading:after,
 .jimu-primary-loading {
-    background: green;
+    background: white;
     -webkit-animation: loading-keys-app-loading 0.8s infinite ease-in-out;
     animation: loading-keys-app-loading 0.8s infinite ease-in-out;
     width: 13.6px;
@@ -52,13 +52,13 @@
     80%,
     100% {
         opacity: .75;
-        box-shadow: 0 0 green;
+        box-shadow: 0 0 white;
         height: 32px;
     }
 
     40% {
         opacity: 1;
-        box-shadow: 0 -8px green;
+        box-shadow: 0 -8px white;
         height: 40px;
     }
 }
@@ -69,13 +69,13 @@
     80%,
     100% {
         opacity: .75;
-        box-shadow: 0 0 green;
+        box-shadow: 0 0 white;
         height: 32px;
     }
 
     40% {
         opacity: 1;
-        box-shadow: 0 -8px green;
+        box-shadow: 0 -8px white;
         height: 40px;
     }
 }

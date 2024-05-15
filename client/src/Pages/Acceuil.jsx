@@ -2,6 +2,7 @@ import React from "react";
 import "../CSS/Accueil.css";
 import Chart from "../Components/chart/chart";
 import { Link } from "react-router-dom";
+import PresqueFinit from "../Components/PresqueFinit";
 
 const Acceuil = () => {
     return (
@@ -57,6 +58,7 @@ const Acceuil = () => {
                 </Link>
             </div>
             <Chart />   	
+            <PresqueFinit/>
         </>
     );
 };

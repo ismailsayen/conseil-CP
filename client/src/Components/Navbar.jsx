@@ -6,13 +6,13 @@ import Notifications from './Notification/Notifications'
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 
-const Navbar = ({ setIsLoggedIn , setRole}) => {
-const [name, setName] = useState([]);
+const Navbar = ({ setIsLoggedIn, setRole }) => {
+    const [name, setName] = useState([]);
     const [notification, setNotification] = useState(false)
     const [dropdown, setDropdown] = useState(false)
     const [auth, setAuth] = React.useState(true);
     const [anchorEl, setAnchorEl] = React.useState(null);
-
+    const [profileConatiner, setProfileConatiner] = useState(false)
     const handleChange = (event) => {
         setAuth(event.target.checked);
     };
@@ -27,6 +27,9 @@ const [name, setName] = useState([]);
 
     const handleCloseNotification = () => {
         setNotification(false);
+    };
+    const handleToggleProfile = () => {
+        setProfileConatiner(false);
     };
 
     const handleRoleAndName = async () => {
@@ -46,7 +49,6 @@ const [name, setName] = useState([]);
             }
         } catch (error) {
             console.error('Error during logout:', error.message);
-            // Handle error (e.g., show error message to the user)
         }
     }
     const handleLogout = async () => {
@@ -65,7 +67,6 @@ const [name, setName] = useState([]);
             }
         } catch (error) {
             console.error('Error during logout:', error.message);
-            // Handle error (e.g., show error message to the user)
         }
     };
     function sidelock() {
@@ -74,7 +75,6 @@ const [name, setName] = useState([]);
 
         sidebar.classList.toggle('transform-none');
 
-        // Toggle ARIA attributes
         sidebar.setAttribute('aria-hidden', isSidebarHidden ? 'false' : 'true');
         sidebar.setAttribute('aria-modal', isSidebarHidden ? 'true' : 'false');
         sidebar.setAttribute('role', isSidebarHidden ? 'dialog' : 'none');
@@ -95,10 +95,11 @@ const [name, setName] = useState([]);
                                 </svg>
                             </button>
                             <a className="flex ms-2 md:me-24">
-                                <img src={Logo} class="h-14" />
+                                <img src={Logo} className="h-14" />
                             </a>
                         </div>
                         <div className="flex items-center gap-2">
+
                             <div className='relative'>
                                 <div onClick={() => setNotification(prev => !prev)} className='cursor-pointer'>
                                     {notification ?
@@ -121,15 +122,35 @@ const [name, setName] = useState([]);
                                     <button aria-label="account of current user"
                                         aria-controls="menu-appbar"
                                         aria-haspopup="true"
-                                        onClick={handleMenu} type="button" class="flex text-sm rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
-                                        <span class="sr-only">Open user menu</span>
-                                        <svg class="w-12 h-12 text-green-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                        onClick={() => setProfileConatiner(prev => !prev)} type="button" className="flex text-sm rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                                        <span className="sr-only">Open user menu</span>
+                                        <svg className="w-12 h-12 text-green-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                             <path fill-rule="evenodd" d="M12 20a7.966 7.966 0 0 1-5.002-1.756l.002.001v-.683c0-1.794 1.492-3.25 3.333-3.25h3.334c1.84 0 3.333 1.456 3.333 3.25v.683A7.966 7.966 0 0 1 12 20ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 5.5-4.44 9.963-9.932 10h-.138C6.438 21.962 2 17.5 2 12Zm10-5c-1.84 0-3.333 1.455-3.333 3.25S10.159 13.5 12 13.5c1.84 0 3.333-1.455 3.333-3.25S13.841 7 12 7Z" clip-rule="evenodd" />
                                         </svg>
                                     </button>
                                 </div>
-                                <div style={{ zIndex: "1" }} >
-                                    <Menu
+                                <div>
+                                    {
+                                        profileConatiner &&
+                                        <div className='absolute right-1 mt-9 w-[300px] p-3 bg-white border border-gray-200 rounded-lg shadow-md'>
+                                            <p className='mb-1 p-2 font-bold'>{name.nom} {name.prenom}</p>
+                                            <ul className='flex flex-col gap-2'>
+                                                <li className='p-3 border-b flex justify-between items-center cursor-pointer font-medium hover:text-white hover:bg-primary-500 rounded-md hover:shadow-md '>
+                                                    <Link to="/acceuil">Profile</Link>
+                                                    <i class="fa-solid fa-user"></i>
+                                                </li>
+                                                <li className='p-3 border-b flex justify-between items-center cursor-pointer font-medium hover:text-white hover:bg-primary-500 rounded-md hover:shadow-md '>
+                                                    <Link to='/editPassowrd'>Modifier mot de passe</Link>
+                                                    <i class="fa-solid fa-key"></i>
+                                                </li>
+                                                <li className='p-3 border-b flex justify-between items-center cursor-pointer font-medium hover:text-white hover:bg-red-600 rounded-md hover:shadow-md ' onClick={handleLogout}>
+                                                    Déconnection
+                                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    }
+                                    {/* <Menu
                                         sx={{ mt: '45px' }}
                                         id="menu-appbar"
                                         anchorEl={anchorEl}
@@ -150,7 +171,7 @@ const [name, setName] = useState([]);
                                         <MenuItem>Profile</MenuItem>
                                         <MenuItem><Link to='/editPassowrd'>Modifier mot de passe</Link></MenuItem>
                                         <MenuItem onClick={handleLogout}>Déconnection</MenuItem>
-                                    </Menu>
+                                    </Menu> */}
                                 </div>
                             </div>
                         </div>
@@ -162,64 +183,66 @@ const [name, setName] = useState([]);
                     <ul className="space-y-2 font-medium">
                         <li>
                             <Link to="/" className="flex items-center p-3 text-gray-700 rounded-md hover:bg-[#5D5FEF] hover:shadow hover:text-white group">
-                            <i class="fa-solid fa-home"></i>
-                                <span class="flex-1 font-semibold ms-3 whitespace-nowrap">Accueil</span>
+                                <i className="fa-solid fa-home"></i>
+                                <span className="flex-1 font-semibold ms-3 whitespace-nowrap">Accueil</span>
                             </Link>
                         </li>
                         <li>
                             <div className='p-3 cursor-pointer  rounded-md flex text-gray-700 mb-3 justify-between items-center hover:bg-[#5D5FEF] hover:shadow hover:text-white' onClick={() => setDropdown(prev => !prev)}>
                                 <Link className="flex items-center rounded-md group">
-                                <i class="fa-solid fa-store"></i>
-                                    <span class="flex-1 font-semibold ms-3 whitespace-nowrap">Stock</span>
+                                    <i className="fa-solid fa-store"></i>
+                                    <span className="flex-1 font-semibold ms-3 whitespace-nowrap">Stock</span>
                                 </Link>
                                 {dropdown ? (
                                     <i className="fa-solid fa-caret-up text-xl"></i>
                                 ) : (
                                     <i className="fa-solid fa-caret-down text-xl"></i>
-                                )}                            </div>
-
-                            {dropdown && <ul className='p-2 text-white rounded-md flex flex-col gap-2'>
-                                <li>
-                                    <Link to="/Stock" className="flex items-center p-3 hover:bg-gray-800 hover:text-white text-gray-700 rounded-md hover:shadow group">
-                                        <i class="fa-solid fa-boxes-stacked"></i>
-                                        <span class="flex-1 font-semibold ms-3 whitespace-nowrap">Articles</span>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/Stock/PCs" className="flex items-center p-3 hover:bg-gray-800 hover:text-white  text-gray-700 rounded-md hover:shadow group">
-                                        <i class="fa-solid fa-desktop"></i>
-                                        <span class="flex-1 font-semibold ms-3 whitespace-nowrap">PCs</span>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/Stock/En-Panne" className="flex items-center p-3 hover:bg-gray-800 hover:text-white text-gray-700 rounded-md hover:shadow group">
-                                        <i class="fa-solid fa-wrench"></i>
-                                        <span class="flex-1 font-semibold ms-3 whitespace-nowrap">Pannes</span>
-                                    </Link>
-                                </li>
-                            </ul>}
+                                )}
+                            </div>
+                            {
+                                dropdown && <ul className='p-2 bg-gray-200 shadow-md text-white rounded-md flex flex-col gap-2'>
+                                    <li>
+                                        <Link to="/Stock" className="flex items-center p-3 hover:bg-gray-800 hover:text-white text-gray-700 rounded-md hover:shadow group">
+                                            <i className="fa-solid fa-boxes-stacked"></i>
+                                            <span className="flex-1 font-semibold ms-3 whitespace-nowrap">Articles</span>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/Stock/PCs" className="flex items-center p-3 hover:bg-gray-800 hover:text-white  text-gray-700 rounded-md hover:shadow group">
+                                            <i className="fa-solid fa-desktop"></i>
+                                            <span className="flex-1 font-semibold ms-3 whitespace-nowrap">PCs</span>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/Stock/En-Panne" className="flex items-center p-3 hover:bg-gray-800 hover:text-white text-gray-700 rounded-md hover:shadow group">
+                                            <i className="fa-solid fa-wrench"></i>
+                                            <span className="flex-1 font-semibold ms-3 whitespace-nowrap">Pannes</span>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            }
                         </li>
                         <li>
                             <Link to="/Commandes" className="flex items-center p-3 text-gray-700 rounded-md hover:bg-[#5D5FEF] hover:shadow hover:text-white group">
-                                <i class="fa-solid fa-clipboard"></i>
-                                <span class="flex-1 font-semibold ms-3 whitespace-nowrap">Commandes</span>
+                                <i className="fa-solid fa-clipboard"></i>
+                                <span className="flex-1 font-semibold ms-3 whitespace-nowrap">Commandes</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/Utilisateurs" className="flex items-center p-3 text-gray-700 rounded-md hover:bg-[#5D5FEF] hover:shadow hover:text-white group">
-                            <i class="fa-solid fa-users"></i>
-                                <span class="flex-1 font-semibold ms-3 whitespace-nowrap">Utilisateurs</span>
+                                <i className="fa-solid fa-users"></i>
+                                <span className="flex-1 font-semibold ms-3 whitespace-nowrap">Utilisateurs</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/Directions-Bureaus" className="flex items-center p-3 text-gray-700 rounded-md hover:bg-[#5D5FEF] hover:shadow hover:text-white group">
-                            <i class="fa-solid fa-building"></i>
-                                <span class="flex-1 font-semibold ms-3 whitespace-nowrap">Directions & Bureaus</span>
+                                <i className="fa-solid fa-building"></i>
+                                <span className="flex-1 font-semibold ms-3 whitespace-nowrap">Directions & Bureaus</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/Fournisseurs" className="flex items-center p-3 text-gray-700 rounded-md hover:bg-[#5D5FEF] hover:shadow hover:text-white group">
-                            <i class="fa-solid fa-truck"></i>
+                                <i className="fa-solid fa-truck"></i>
                                 <span className="flex-1 ms-3 whitespace-nowrap">Fournisseurs</span>
                             </Link>
                         </li>
@@ -231,7 +254,7 @@ const [name, setName] = useState([]);
                         </li>
                     </ul>
                     <button onClick={handleLogout} className="flex shadow-md items-center p-3 bg-red-600 text-white rounded-md hover:bg-red-700 hover:shadow hover:text-white group">
-                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <i className="fa-solid fa-right-from-bracket"></i>
                         <span className="ms-2 font-semibold whitespace-nowrap">Deconnexion</span>
                     </button>
                 </div>
